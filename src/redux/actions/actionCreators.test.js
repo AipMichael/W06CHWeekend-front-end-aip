@@ -1,4 +1,4 @@
-import { getRandomRobot, getRandomRobots } from "../mocks/factories/factories";
+import { getRandomRobots } from "../../mocks/factories/factories";
 import { loadRobotsAction } from "./actionCreators";
 import actionTypes from "./actionTypes";
 
