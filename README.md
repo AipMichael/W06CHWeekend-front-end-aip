@@ -10,6 +10,7 @@ MAIN - ul
 - calls upon a function that maps components to render
 - renders a create button
 - has delete and edit functions
+- gives function to ROBOT.
 
 ROBOT -component (li)
 
@@ -25,3 +26,7 @@ FORM
 
 - renders inputs and labels
 - receives function and calls it on submit
+
+APP
+
+- creates and passes functions for form & context.

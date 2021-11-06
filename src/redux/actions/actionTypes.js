@@ -1,5 +1,5 @@
 const actionTypes = {
-  loadTask: "LOAD_TASK",
+  loadRobots: "LOAD_ROBOTS",
 };
 
 export default actionTypes;
