@@ -1,8 +1,7 @@
 const RobotItem = ({ robot }) => {
   return (
     <li>
-      <input type="checkbox" />
-      {robot}
+      {robot.name}
       <button className="robots__edit" onClick={() => {}}>
         Edit robot
       </button>

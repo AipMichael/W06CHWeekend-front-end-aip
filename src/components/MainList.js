@@ -1,19 +1,15 @@
-import { useEffect } from "react";
-import useRobot from "../hooks";
+import useRobot from "../hooks/useRobot";
 import RobotItem from "./RobotItem";
 
 const MainList = () => {
-  const { robots, loadRobots } = useRobot;
+  const { robots } = useRobot();
+  console.log(robots, "mainlist");
 
-  useEffect(() => {
-    loadRobots();
-  }, [loadRobots]);
   return (
     <ul>
-      {robots.map(({ robot }) => (
+      {robots.map((robot) => (
         <RobotItem robot={robot} key={robot.id} />
       ))}
-      ;
     </ul>
   );
 };

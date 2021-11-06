@@ -10,7 +10,7 @@ const useRobot = () => {
     dispatch(loadRobotsThunk());
   }, [dispatch]);
 
-  return loadRobots;
+  return { robots, loadRobots };
 };
 
 export default useRobot;
