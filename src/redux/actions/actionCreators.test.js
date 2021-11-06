@@ -12,7 +12,7 @@ describe("Given a loadTaskAction creator", () => {
       };
 
       const resultedAction = loadRobotsAction(robotsList);
-
+      console.log("hola");
       expect(resultedAction).toEqual(expectedAction);
     });
   });

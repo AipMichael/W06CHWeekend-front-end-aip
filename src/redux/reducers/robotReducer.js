@@ -10,6 +10,7 @@ const robotReducer = (robots = [], action) => {
     default:
       newRobots = robots;
       break;
+      console.log("hola");
   }
   return newRobots;
 };

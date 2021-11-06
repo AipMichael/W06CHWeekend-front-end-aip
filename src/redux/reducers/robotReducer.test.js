@@ -11,7 +11,7 @@ describe("Given a robotReducer reducer", () => {
         robotsList,
         loadRobotsAction(robotsList)
       );
-
+      console.log("hola");
       expect(newRobotsList).toEqual(newRobotsList);
     });
   });
