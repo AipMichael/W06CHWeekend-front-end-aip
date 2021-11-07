@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { loadRobotsThunk } from "../redux/thunks";
+import { loadRobotsThunk, createRobotThunk } from "../redux/thunks";
 
 const useRobot = () => {
   const robots = useSelector((store) => store.robots);
@@ -10,7 +10,14 @@ const useRobot = () => {
     dispatch(loadRobotsThunk());
   }, [dispatch]);
 
-  return { robots, loadRobots };
+  const createRobot = useCallback(
+    (robot) => {
+      dispatch(createRobotThunk(robot));
+    },
+    [dispatch]
+  );
+
+  return { robots, loadRobots, createRobot };
 };
 
 export default useRobot;

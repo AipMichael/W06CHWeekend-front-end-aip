@@ -15,9 +15,9 @@ const RobotItem = ({ robot }) => {
         />
         <div className="card-body">
           <h5 className="card-title">{robot.name}</h5>
+          <p className="card-text">Speed: {robot.specifications.speed}</p>
           <p className="card-text">
-            Speed:{robot.specifications.speed}
-            Toughness:{robot.specifications.toughness}
+            Toughness: {robot.specifications.toughness}
           </p>
           <button onClick={actionOnEdit} className="btn btn-primary">
             Edit
