@@ -3,7 +3,7 @@ import { lorem } from "faker/locale/es";
 import { Factory } from "fishery";
 
 const factory = Factory.define(({ sequence }) => ({
-  id: sequence,
+  _id: sequence,
   name: lorem.sentence(2),
   imageUrl: datatype.string(1),
   specifications: {

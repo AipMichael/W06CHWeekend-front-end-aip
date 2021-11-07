@@ -1,4 +1,7 @@
 const RobotItem = ({ robot }) => {
+  const actionOnClick = () => {};
+  const actionOnEdit = () => {};
+
   return (
     <li>
       <div className="card">
@@ -9,8 +12,10 @@ const RobotItem = ({ robot }) => {
             Speed:{robot.specifications.speed}
             Toughness:{robot.specifications.toughness}
           </p>
-          <button className="btn btn-primary">Edit</button>
-          <button href="#" className="btn btn-primary">
+          <button onClick={actionOnEdit} className="btn btn-primary">
+            Edit
+          </button>
+          <button onClick={actionOnClick} className="btn btn-primary">
             Delete
           </button>
         </div>
