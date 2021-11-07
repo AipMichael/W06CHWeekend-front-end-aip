@@ -1,7 +1,6 @@
 import MainList from "./components/MainList";
-import { useEffect } from "react";
+
 import "./App.css";
-import useRobot from "./hooks/useRobot";
 
 function App() {
   return (
