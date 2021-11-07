@@ -1,11 +1,20 @@
 const RobotItem = ({ robot }) => {
   return (
     <li>
-      {robot.name}
-      <button className="robots__edit" onClick={() => {}}>
-        Edit robot
-      </button>
-      <button className="robots__delete">Delete robot</button>
+      <div className="card">
+        <img className="card-img-top" src={robot.imageUrl} alt="cute robot" />
+        <div className="card-body">
+          <h5 className="card-title">{robot.name}</h5>
+          <p className="card-text">
+            Speed:{robot.specifications.speed}
+            Toughness:{robot.specifications.toughness}
+          </p>
+          <button className="btn btn-primary">Edit</button>
+          <button href="#" className="btn btn-primary">
+            Delete
+          </button>
+        </div>
+      </div>
     </li>
   );
 };
