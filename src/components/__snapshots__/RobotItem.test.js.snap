@@ -1,14 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Given a RobotItem component When it receives a robot Then it should render a card with the given robot inside 1`] = `
-<li>
+<li
+  className="col-4"
+>
   <div
     className="card"
   >
     <img
       alt="cute robot"
-      className="card-img-top"
-      src="D"
+      className="card-img-top robot-picture"
+      height="200"
+      src="https://i.pinimg.com/236x/04/7a/cd/047acd102d3424cd44743e803818f614--halloween-costumes-th-doctor.jpg"
     />
     <div
       className="card-body"
@@ -16,15 +19,15 @@ exports[`Given a RobotItem component When it receives a robot Then it should ren
       <h5
         className="card-title"
       >
-        Molestiae unde.
+        Clockwork Droid
       </h5>
       <p
         className="card-text"
       >
         Speed:
-        0
+        8
         Toughness:
-        0
+        6
       </p>
       <button
         className="btn btn-primary"
