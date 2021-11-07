@@ -1,0 +1,8 @@
+.card-body {
+  background-color: grey;
+}
+
+.robot-picture {
+  object-fit: cover;
+  width: 100%;
+}

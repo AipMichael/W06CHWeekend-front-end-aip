@@ -6,7 +6,7 @@ const MainList = () => {
   const { robots } = useRobot();
 
   return (
-    <ul className="robot-list">
+    <ul className="robot-list row">
       {robots.map((robot) => (
         <RobotItem robot={robot} key={robot._id} />
       ))}

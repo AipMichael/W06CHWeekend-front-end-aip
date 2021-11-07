@@ -12,6 +12,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1 className="main-title">My robots</h1>
       <MainList />
     </div>
   );
