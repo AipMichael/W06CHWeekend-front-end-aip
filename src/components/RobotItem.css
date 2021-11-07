@@ -1,5 +1,10 @@
+.card {
+  max-width: 250px;
+}
+
 .card-body {
   background-color: #ffce00;
+  color: blue;
 }
 
 .robot-picture {

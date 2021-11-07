@@ -1,9 +1,19 @@
-import { loadRobotsAction } from "../actions/actionCreators";
+import { loadRobotsAction, createRobotAction } from "../actions/actionCreators";
+import axios from "axios";
+import dotenv from "dotenv";
 
-export const loadRobotsThunk = () => async (dispatch) => {
-  const response = await fetch("https://aip-am-a-robot.herokuapp.com/robots");
+const myApi = `https://aip-am-a-robot.herokuapp.com/robots/create?token=${process.env.TOKEN}`;
 
-  const robots = await response.json();
-  console.log(robots);
-  dispatch(loadRobotsAction(robots));
+export const loadRobotsThunk = () => {
+  return async (dispatch) => {
+    const { data: robots } = await axios.get(myApi);
+    dispatch(loadRobotsAction(robots));
+  };
+};
+
+export const createRobotThunk = (robot) => {
+  return async (dispatch) => {
+    const { data: newRobot } = await axios.post(myApi, robot);
+    dispatch(createRobotAction(newRobot));
+  };
 };

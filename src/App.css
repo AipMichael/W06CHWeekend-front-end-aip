@@ -5,9 +5,28 @@
 .App {
   background-color: black;
   margin: auto;
+  height: 100%;
 }
 
 .main-title {
-  color: #ff1493;
+  color: white;
   text-align: center;
+  padding: 15px 32px;
+}
+
+.myfooter {
+  height: 60px;
+  width: 100%;
+  background-color: pink;
+  background-image: url("./secretMario.PNG");
+  background-size: contain;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.surprise {
+  background-color: transparent;
+  color: white;
+  border: none;
 }
