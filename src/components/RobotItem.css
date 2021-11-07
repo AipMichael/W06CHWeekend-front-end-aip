@@ -1,0 +1,12 @@
+.card-body {
+  background-color: #ffce00;
+}
+
+.robot-picture {
+  object-fit: cover;
+  width: 100%;
+}
+
+button {
+  margin: 1px;
+}
