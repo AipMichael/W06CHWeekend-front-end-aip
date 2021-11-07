@@ -1,7 +1,8 @@
 import { loadRobotsAction, createRobotAction } from "../actions/actionCreators";
 import axios from "axios";
+import dotenv from "dotenv";
 
-const myApi = "https://aip-am-a-robot.herokuapp.com/robots";
+const myApi = `https://aip-am-a-robot.herokuapp.com/robots/create?token=${process.env.TOKEN}`;
 
 export const loadRobotsThunk = () => {
   return async (dispatch) => {

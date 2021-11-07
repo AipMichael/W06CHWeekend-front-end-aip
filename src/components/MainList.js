@@ -11,7 +11,7 @@ const MainList = () => {
   }, [loadRobots]);
 
   return (
-    <ul className="robot-list row">
+    <ul className="robot-list row container-fluid">
       {robots.map((robot) => (
         <RobotItem robot={robot} key={robot._id} />
       ))}
