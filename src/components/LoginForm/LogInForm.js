@@ -26,29 +26,29 @@ const LogInForm = () => {
 
   return (
     <form onSubmit={onSubmit} autoComplete="off" noValidate>
-      <div class="form-group">
-        <label for="username">Your username</label>
+      <div className="form-group text-light">
+        <label htmlFor="username">Your username</label>
         <input
           type="username"
-          class="form-control"
+          className="form-control"
           id="username"
           placeholder="Enter your username"
           value={userData.username}
           onChange={changeUserData}
         />
       </div>
-      <div class="form-group">
-        <label for="password">Password</label>
+      <div className="form-group text-light">
+        <label htmlFor="password">Password</label>
         <input
           type="password"
-          class="form-control"
+          className="form-control"
           id="password"
           placeholder="Password"
           value={userData.username}
           onChange={changeUserData}
         />
       </div>
-      <button type="submit" class="btn btn-primary">
+      <button type="submit" className="btn btn-primary">
         Submit
       </button>
     </form>
