@@ -3,12 +3,8 @@ import momReducer from "../reducers/momReducer";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 
-const configureStore = (initialValues) => {
-  return createStore(
-    momReducer,
-    initialValues,
-    composeWithDevTools(applyMiddleware(thunk))
-  );
+const configureStore = () => {
+  return createStore(momReducer, composeWithDevTools(applyMiddleware(thunk)));
 };
 
 export default configureStore;

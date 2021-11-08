@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { loadRobotsThunk, createRobotThunk } from "../redux/thunks";
 
 const useRobot = () => {
-  const robots = useSelector((store) => store.robots);
+  const robots = useSelector(({ robots }) => robots); //store estaba asi: (store)=> store.robots
   const dispatch = useDispatch();
 
   const loadRobots = useCallback(() => {

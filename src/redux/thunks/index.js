@@ -6,7 +6,10 @@ const myCreateApi = `https://aip-am-a-robot.herokuapp.com/robots/create?token=${
 
 export const loadRobotsThunk = () => {
   return async (dispatch) => {
-    const { data: robots } = await axios.get(myApi);
+    const { token } = JSON.parse(localStorage.getItem("pablo"));
+    const { data: robots } = await axios.get(myApi, {
+      headers: { Authorization: "Bearer hola" },
+    }); //falta arreglar
     dispatch(loadRobotsAction(robots));
   };
 };
