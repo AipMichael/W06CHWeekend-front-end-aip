@@ -4,7 +4,7 @@ import "./App.css";
 /* import { useEffect } from "react";
 import jwtDecode from "jwt-decode";
 import { userLoginAction } from "./redux/actions/actionCreators"; */
-import { useDispatch, useSelector } from "react-redux";
+/* import { useDispatch, useSelector } from "react-redux"; */
 import LoginForm from "./components/LoginForm/LogInForm";
 
 function App() {
@@ -14,8 +14,8 @@ function App() {
     console.log(surprise);
   };
 
-  const { isAuthenticated } = useSelector(({ user }) => user);
-  const dispatch = useDispatch();
+  /*   const { isAuthenticated } = useSelector(({ user }) => user);
+  const dispatch = useDispatch(); */
 
   /*   useEffect(() => {
     const token = JSON.parse(localStorage.getItem("pablo"));
