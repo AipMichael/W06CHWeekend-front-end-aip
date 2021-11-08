@@ -15,13 +15,13 @@ const LogInForm = () => {
   const changeUserData = (event) => {
     setUserData({
       ...userData,
-      [event.terget.id]: event.target.value,
+      [event.target.id]: event.target.value,
     });
   };
 
   const onSubmit = (event) => {
     event.preventDefault();
-    dispatch(userLoginThunk(userData));
+    userLoginThunk(userData);
   };
 
   return (
@@ -44,7 +44,7 @@ const LogInForm = () => {
           className="form-control"
           id="password"
           placeholder="Password"
-          value={userData.username}
+          value={userData.password}
           onChange={changeUserData}
         />
       </div>

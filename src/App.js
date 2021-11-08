@@ -6,6 +6,7 @@ import jwtDecode from "jwt-decode";
 import { userLoginAction } from "./redux/actions/actionCreators"; */
 /* import { useDispatch, useSelector } from "react-redux"; */
 import LoginForm from "./components/LoginForm/LogInForm";
+import { useSelector } from "react-redux";
 
 function App() {
   const surpriseMe = () => {
@@ -14,8 +15,8 @@ function App() {
     console.log(surprise);
   };
 
-  /*   const { isAuthenticated } = useSelector(({ user }) => user);
-  const dispatch = useDispatch(); */
+  const { isAuthenticated } = useSelector(({ user }) => user);
+  /* const dispatch = useDispatch();  */
 
   /*   useEffect(() => {
     const token = JSON.parse(localStorage.getItem("pablo"));
@@ -28,7 +29,7 @@ function App() {
     <div className="App">
       <LoginForm />
       <h1 className="main-title">My robots</h1>
-      <MainList />
+      {isAuthenticated ? <MainList /> : ""}
       <footer className="myfooter">
         <button className="surprise" onClick={surpriseMe}>
           Aip was here.
