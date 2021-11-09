@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useUser from "../../hooks/useUser";
 
 const LogInForm = () => {
@@ -10,6 +10,7 @@ const LogInForm = () => {
   };
 
   const [userData, setUserData] = useState(initialUser);
+  const [isDisabled, setIsDisabled] = useState(true);
 
   const changeUserData = (event) => {
     setUserData({
@@ -23,6 +24,10 @@ const LogInForm = () => {
 
     userLogin(userData);
   };
+
+  useEffect(() => {
+    setIsDisabled(userData.username === "" || userData.password === "");
+  }, [userData.username, userData.password]);
 
   return (
     <div className="col-4 form-container d-flex justify-content-center">
@@ -54,7 +59,11 @@ const LogInForm = () => {
             onChange={changeUserData}
           />
         </div>
-        <button type="submit" className="btn btn-primary m-2">
+        <button
+          type="submit"
+          className="btn btn-primary m-2"
+          disabled={isDisabled}
+        >
           Submit
         </button>
       </form>
