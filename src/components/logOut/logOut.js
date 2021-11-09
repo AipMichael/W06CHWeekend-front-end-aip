@@ -1,14 +1,21 @@
-import { userLogoutAction } from "../../redux/actions/actionCreators";
+import useUser from "../../hooks/useUser";
 
-const Logout=()=>{
-  const navigate = useNavigate();
-  const dispatch=useDispatch();
-  dispatch(userLogoutAction())
-  localStorage.removeItem("karenBot");
+import "./logOut.css";
 
+const Logout = () => {
+  const { userLogout } = useUser();
 
+  const onLogout = (event) => {
+    event.preventDefault();
+    localStorage.removeItem(process.env.REACT_APP_LOCAL_STORAGE);
+    userLogout();
+  };
 
-  return(
+  return (
+    <button className="btn btn-primary mylogout" onClick={onLogout}>
+      Logout
+    </button>
+  );
+};
 
-  )
-}
+export default Logout;

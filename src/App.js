@@ -7,6 +7,7 @@ import { userLoginAction } from "./redux/actions/actionCreators"; */
 /* import { useDispatch, useSelector } from "react-redux"; */
 import LoginForm from "./components/LoginForm/LogInForm";
 import useUser from "./hooks/useUser";
+import Logout from "./components/logOut/logOut";
 
 function App() {
   const surpriseMe = () => {
@@ -20,16 +21,19 @@ function App() {
   } = useUser();
 
   return (
-    <div className="App row justify-content-center">
-      <LoginForm />
+    <div className="App ">
       <h1 className="main-title">My robots</h1>
       <div className="App__background">
         {isAuthenticated ? (
           <>
+            <Logout />
+
             <MainList />
           </>
         ) : (
-          ""
+          <div className="row justify-content-center">
+            <LoginForm />
+          </div>
         )}
       </div>
       <footer className="myfooter">
