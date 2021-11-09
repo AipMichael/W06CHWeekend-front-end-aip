@@ -10,8 +10,9 @@ export const loadRobotsThunk = () => {
       localStorage.getItem(process.env.REACT_APP_LOCAL_STORAGE)
     );
     const { data: robots } = await axios.get(myApi + "/", {
-      headers: { Athorization: "Bearer " + token },
+      headers: { Authorization: "Bearer " + token },
     });
+    console.log(robots, "thunc 15");
     dispatch(loadRobotsAction(robots));
   };
 };
