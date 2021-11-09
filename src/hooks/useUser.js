@@ -6,7 +6,8 @@ const useUser = () => {
   const user = useSelector(({ user }) => user);
   const dispatch = useDispatch();
 
-  const userLogin = () => {
+  const userLogin = (user) => {
+    console.log(user, "juk 10");
     dispatch(userLoginThunk(user));
   };
 
@@ -14,7 +15,7 @@ const useUser = () => {
     dispatch(userLogoutAction());
   };
 
-  return { user, userLogin };
+  return { user, userLogin, userLogout };
 };
 
 export default useUser;

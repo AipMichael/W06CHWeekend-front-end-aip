@@ -2,9 +2,11 @@
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { userLoginThunk } from "../../redux/thunks/userThunks";
+import useUser from "../../hooks/useUser";
 
 const LogInForm = () => {
-  const dispatch = useDispatch();
+  const { userLogin } = useUser();
+
   const initialUser = {
     username: "",
     password: "",
@@ -21,7 +23,8 @@ const LogInForm = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    userLoginThunk(userData);
+    console.log(userData);
+    userLogin(userData);
   };
 
   return (

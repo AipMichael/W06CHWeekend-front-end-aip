@@ -13,6 +13,7 @@ const Form = () => {
   };
 
   const [robot, setRobot] = useState(initialRobot);
+  /*   const [isDisabled, setIsDisabled] = useState(true); */
 
   const resetForm = () => {
     setRobot(initialRobot);
@@ -92,7 +93,7 @@ const Form = () => {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary" disabled={isDisabled}>
           Crear
         </button>
       </form>

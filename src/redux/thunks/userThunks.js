@@ -10,6 +10,9 @@ export const userLoginThunk = (user) => async (dispatch) => {
     const token = response.data.token;
     const user = jwtDecode(token); //instaló npm i jwt-decode
     dispatch(userLoginAction(user));
-    localStorage.setItem("karenBot", JSON.stringify({ token: token }));
+    localStorage.setItem(
+      process.env.REACT_APP_LOCAL_STORAGE,
+      JSON.stringify({ token: token })
+    );
   }
 };
