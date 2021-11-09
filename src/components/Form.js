@@ -13,8 +13,6 @@ const Form = () => {
   };
 
   const [robot, setRobot] = useState(initialRobot);
-  /*   const [isDisabled, setIsDisabled] = useState(true); */
-
   const resetForm = () => {
     setRobot(initialRobot);
   };

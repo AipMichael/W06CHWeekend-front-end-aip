@@ -1,7 +1,6 @@
 /* import { render, screen } from "@testing-library/react"; */
 import ReactTestRenderer from "react-test-renderer";
 import RobotItem from "./RobotItem";
-import { getRandomRobot } from "../mocks/factories/factories";
 
 describe("Given a RobotItem component", () => {
   describe("When it receives a robot", () => {
