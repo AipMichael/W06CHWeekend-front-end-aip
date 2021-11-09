@@ -23,7 +23,7 @@ const LogInForm = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log(userData);
+
     userLogin(userData);
   };
 
