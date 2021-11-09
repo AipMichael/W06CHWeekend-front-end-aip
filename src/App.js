@@ -23,14 +23,15 @@ function App() {
     <div className="App">
       <LoginForm />
       <h1 className="main-title">My robots</h1>
-      {isAuthenticated ? (
-        <>
-          <p>renderizando</p>
-          <MainList />
-        </>
-      ) : (
-        ""
-      )}
+      <div className="App__background">
+        {isAuthenticated ? (
+          <>
+            <MainList />
+          </>
+        ) : (
+          ""
+        )}
+      </div>
       <footer className="myfooter">
         <button className="surprise" onClick={surpriseMe}>
           Aip was here.
