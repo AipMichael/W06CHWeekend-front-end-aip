@@ -2,9 +2,11 @@
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { userLoginThunk } from "../../redux/thunks/userThunks";
+import useUser from "../../hooks/useUser";
 
 const LogInForm = () => {
-  const dispatch = useDispatch();
+  const { userLogin } = useUser();
+
   const initialUser = {
     username: "",
     password: "",
@@ -15,13 +17,14 @@ const LogInForm = () => {
   const changeUserData = (event) => {
     setUserData({
       ...userData,
-      [event.terget.id]: event.target.value,
+      [event.target.id]: event.target.value,
     });
   };
 
   const onSubmit = (event) => {
     event.preventDefault();
-    dispatch(userLoginThunk(userData));
+    console.log(userData);
+    userLogin(userData);
   };
 
   return (
@@ -44,7 +47,7 @@ const LogInForm = () => {
           className="form-control"
           id="password"
           placeholder="Password"
-          value={userData.username}
+          value={userData.password}
           onChange={changeUserData}
         />
       </div>
