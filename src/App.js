@@ -20,7 +20,7 @@ function App() {
   } = useUser();
 
   return (
-    <div className="App">
+    <div className="App row justify-content-center">
       <LoginForm />
       <h1 className="main-title">My robots</h1>
       <div className="App__background">
