@@ -12,7 +12,7 @@ export const loadRobotsThunk = () => {
     const { data: robots } = await axios.get(myApi + "/", {
       headers: { Authorization: "Bearer " + token },
     });
-    console.log(robots, "thunc 15");
+
     dispatch(loadRobotsAction(robots));
   };
 };

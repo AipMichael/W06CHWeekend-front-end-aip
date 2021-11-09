@@ -20,17 +20,18 @@ function App() {
   } = useUser();
 
   return (
-    <div className="App">
+    <div className="App row justify-content-center">
       <LoginForm />
       <h1 className="main-title">My robots</h1>
-      {isAuthenticated ? (
-        <>
-          <p>renderizando</p>
-          <MainList />
-        </>
-      ) : (
-        ""
-      )}
+      <div className="App__background">
+        {isAuthenticated ? (
+          <>
+            <MainList />
+          </>
+        ) : (
+          ""
+        )}
+      </div>
       <footer className="myfooter">
         <button className="surprise" onClick={surpriseMe}>
           Aip was here.
